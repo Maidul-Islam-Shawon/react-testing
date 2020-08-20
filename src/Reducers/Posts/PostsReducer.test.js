@@ -1,22 +1,23 @@
 import { Types } from "../../Actions/Types";
-import PostsReducer from "./PostsReducer";
+import PostReducer from "./PostsReducer";
 
-describe("Posts Reducer", () => {
+describe("Post Reducer", () => {
   it("should return default state", () => {
-    const newState = PostsReducer(undefined, {});
+    const newState = PostReducer(undefined, {});
     expect(newState).toEqual([]);
   });
 
-  it("should return new state if receiving type", () => {
-    const Posts = [
+  it("should return new state if receiving Types", () => {
+    const posts = [
       { title: "Test 1" },
       { title: "Test 2" },
       { title: "Test 3" },
     ];
-    const newState = PostsReducer(undefined, {
+
+    const newState = PostReducer(undefined, {
       type: Types.GET_POSTS,
-      payload: Posts,
+      payload: posts,
     });
-    expect(newState).toEqual(Posts);
+    expect(newState).toEqual(posts);
   });
 });
