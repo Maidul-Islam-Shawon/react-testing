@@ -9,9 +9,9 @@ describe("Post Reducer", () => {
 
   it("should return new state if receiving Types", () => {
     const posts = [
-      { title: "Test 1" },
-      { title: "Test 2" },
-      { title: "Test 3" },
+      { title: "Test 1", desc: "Desc 1" },
+      { title: "Test 2", desc: "Desc 2" },
+      { title: "Test 3", desc: "Desc 3" },
     ];
 
     const newState = PostReducer(undefined, {
