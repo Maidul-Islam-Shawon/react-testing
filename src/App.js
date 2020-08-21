@@ -37,7 +37,7 @@ class App extends Component {
     };
 
     return (
-      <div className="App">
+      <div className="App" data-test="AppComponent">
         <Header />
         <section className="main">
           <Headline
